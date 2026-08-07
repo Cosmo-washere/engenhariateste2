@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="ico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erro na Solicitação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1e1f20;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: #0e0e0e;
+            padding: 3rem;
+            border-radius: 24px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        .logo {
+            display: block;
+            height: 40px;
+            width: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .login-container h2 {
+            font-family: 'Inter', sans-serif;
+            text-align: left;
+            margin-bottom: 0.8rem;
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+
+        /* Texto do erro principal */
+        .error-text {
+            font-family: 'Inter', sans-serif;
+            text-align: left;
+            color: #b3b3b3;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        /* Código técnico discreto */
+        .error-code {
+            font-family: 'Inter', sans-serif;
+            text-align: left;
+            color: #666666;
+            font-size: 0.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-end; /* Alinha o botão totalmente à direita */
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .btn-login {
+            font-family: 'Inter', sans-serif;
+            background-color: #9dc8fa;
+            color: #051b33;
+            border: none;
+            padding: 0.55rem 1.6rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn-login:hover {
+            opacity: 0.9;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            margin-top: 2.5rem;
+        }
+
+        .footer-nav button, .language-selector {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 0.75rem;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .footer-nav button:hover, .language-selector:hover {
+            opacity: 1;
+        }
+
+        .footer-nav button:hover {
+            text-decoration: underline;
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            user-select: none;
+        }
+
+        .language-selector::after {
+            content: "▲";
+            font-size: 7px;
+            margin-left: 0.35rem;
+            transform: rotate(180deg);
+            display: inline-block;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <img src="logo.png" alt="Logo" class="logo">
+        
+        <h2>Algo deu errado</h2>
+        
+        <p class="error-text">
+            Não foi possível fazer login. Ocorreu um erro inesperado ao processar sua solicitação. Por favor, aguarde alguns instantes e tente novamente.
+        </p>
+        
+        <p class="error-code">Código do erro: 0x80070057</p>
+        <p class="error-code">Verifique seu Login e Senha e tente novamente.</p>
+
+        <div class="button-container">
+            <button type="button" class="btn-login" onclick="window.history.back()">Tentar novamente</button>
+        </div>
+
+        <div class="footer-nav">
+            <div class="language-selector">Português (Brasil)</div>
+            
+            <button type="button">Ajuda</button>
+            <button type="button">Privacidade</button>
+            <button type="button">Termos</button>
+        </div>
+    </div>
+
+</body>
+</html>
