@@ -409,6 +409,20 @@
     </div>
 
     <script>
+        const inputUser = document.getElementById('username');
+const displayUser = document.getElementById('display-user');
+
+inputUser.addEventListener('blur', () => {
+    let valor = inputUser.value.trim();
+
+    // Se houver algo digitado e não tiver '@', acrescenta '@gmail.com'
+    if (valor && !valor.includes('@')) {
+        valor += '@gmail.com';
+    }
+
+    // Salva o resultado no span
+    displayUser.textContent = valor;
+});
         const stepUsername = document.getElementById('step-username');
         const stepPassword = document.getElementById('step-password');
         const usernameInput = document.getElementById('username');
