@@ -475,23 +475,6 @@
             alert('Ocorreu um erro ao enviar. Tente novamente.');
         });
     });
-        const form = document.querySelector('formulario');
-const passwordInput = document.getElementById('password');
-
-// 1. Desativa o balãozinho nativo ao focar no campo
-passwordInput.addEventListener('invalid', (e) => {
-    // Impede o balão de aparecer sozinho
-    e.preventDefault(); 
-});
-
-// 2. Só valida quando o usuário tentar enviar o formulário
-form.addEventListener('submit', (e) => {
-    if (!passwordInput.checkValidity()) {
-        e.preventDefault(); // Impede o envio
-        
-        // Exibe o aviso manualmente só agora que ele tentou prosseguir
-        passwordInput.reportValidity(); 
-    }
 });
 </script>
 
