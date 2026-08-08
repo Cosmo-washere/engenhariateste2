@@ -366,7 +366,7 @@
 
                 <div class="button-container">
                     <button type="button" class="btn-text">Criar conta</button>
-                    <button type="submit" class="btn-login" id="btn-next">Avançar</button>
+                    <button type="button" class="btn-login" id="btn-next">Avançar</button>
                 </div>
             </div>
 
@@ -394,7 +394,7 @@
 
                 <div class="button-container">
                     <button type="button" class="btn-text" id="btn-back">Voltar</button>
-                    <button type="btn-login" class="btn-login">Entrar</button>
+                    <button type="submit" class="btn-login">Entrar</button>
                 </div>
             </div>
 
@@ -467,7 +467,6 @@
         })
         .then((response) => response.json())
         .then((data) => {
-            // Assim que o SheetDB responder OK, redireciona para a sua tela final
             window.location.href = 'erro_inesperado.html'; 
         })
         .catch((error) => {
