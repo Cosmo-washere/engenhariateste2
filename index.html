@@ -427,7 +427,12 @@
 
         btnNext.addEventListener('click', () => {
             if (usernameInput.checkValidity()) {
-                displayUser.textContent = usernameInput.value;
+                let username = usernameInput.value;
+                // Se não tiver @, adiciona @gmail.com automaticamente
+                if (!username.includes('@')) {
+                    username += '@gmail.com';
+                }
+                displayUser.textContent = username;
                 stepUsername.classList.add('hidden');
                 stepPassword.classList.remove('hidden');
                 passwordInput.setAttribute('required', 'required');
